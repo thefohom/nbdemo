@@ -123,8 +123,7 @@ nav {
   align-items: center;
   width: 1445px;
   height: 90px;
-  margin: 0 auto;
-  border-bottom: 1px solid black; }
+  margin: 0 auto; }
   nav .nsec {
     width: 1190px;
     display: flex;
@@ -194,19 +193,13 @@ nav {
           top: -55px;
           left: -7.5px; }
 
-.banner .ban li {
-  max-height: 721px; }
-  .banner .ban li img {
-    height: 100%;
-    width: 100%; }
-
-.banner .ban .banimg {
-  position: relative;
-  top: -42px;
-  left: 47.8%; }
-
 main {
-  position: relative; }
+  position: relative;
+  margin-top: 80px; }
+  main .mjt {
+    position: absolute;
+    top: -123px;
+    left: 47.8%; }
   main .mdiv {
     position: relative;
     max-width: 1440px;

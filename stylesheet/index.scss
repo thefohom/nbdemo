@@ -97,7 +97,6 @@ nav{
     width:1445px;
     height:90px;
     margin:0 auto;
-    border-bottom:1px solid black;
     
    .nsec{
         width:1190px;
@@ -187,30 +186,36 @@ nav{
     }
 }
 
-.banner{
+// .banner{
 
-    .ban{
+//     .ban{
 
-        li{
-            max-height:721px;
-            img{
-                height:100%;
-                width:100%;
-            }
-        }
-        .banimg{
-            // overflow: hidden;
-            position: relative;
-            top:-42px;
-            // display: block;
-            // z-index: 5;
-            left:47.8%;
-        }
-    }
-}
+//         li{
+//             max-height:721px;
+//             img{
+//                 height:100%;
+//                 width:100%;
+//             }
+//         }
+//         .banimg{
+//             // overflow: hidden;
+//             position: relative;
+//             top:-42px;
+//             // display: block;
+//             // z-index: 5;
+//             left:47.8%;
+//         }
+//     }
+// }
 
 main{
     position: relative;
+    margin-top:80px;
+    .mjt{
+        position: absolute;
+        top:-123px;
+        left:47.8%;
+    }
     .mdiv{
         position: relative;
         max-width: 1440px;

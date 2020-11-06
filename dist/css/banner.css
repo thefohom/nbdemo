@@ -1,4 +1,4 @@
-#box {
+#banner {
   width: 1920px;
   height: 721px;
   margin: 0px auto;
@@ -6,32 +6,35 @@
   position: relative;
   overflow: hidden; }
 
-#images {
+#bnimgs {
   width: 19200px;
   height: 721px;
   position: absolute; }
 
-#images img {
+#bnimgs img {
   float: left; }
 
-#btn {
-  width: 170px;
-  height: 20px;
+#bnbtn {
+  width: 266px;
+  height: 10px;
   position: absolute;
-  bottom: 20px;
-  left: 245px; }
+  bottom: 50px;
+  right: 238px; }
 
-#btn span {
-  width: 15px;
-  height: 15px;
+#bnbtn span {
+  width: 19px;
+  height: 5px;
   display: block;
   float: left;
-  border-radius: 50%;
-  background-color: #cccccc;
-  margin-left: 5px; }
+  background-color: #ffffff;
+  margin-left: 12px;
+  margin-top: 10px; }
 
-#btn .first {
-  background-color: red; }
+#bnbtn .first {
+  background-color: #78bc27;
+  height: 10px;
+  width: 32px;
+  margin-top: 5px; }
 
 .direction {
   width: 40px;
@@ -51,5 +54,5 @@
 #next {
   right: 20px; }
 
-#box:hover .direction {
+#banner:hover .direction {
   display: block; }
