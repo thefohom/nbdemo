@@ -1,0 +1,57 @@
+#box{
+    width: 1920px;
+    height: 721px;
+    // border:
+    margin:0px auto;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+#images{
+    width: 19200px;
+    height: 721px;
+    position: absolute;
+}
+#images img{
+    float: left;
+}
+#btn{
+    width: 170px;
+    height: 20px;
+    position: absolute;
+    bottom: 20px;
+    left:245px;
+}
+#btn span{
+    width: 15px;
+    height: 15px;
+    display: block;
+    float: left;
+    border-radius: 50%;
+    background-color: #cccccc;
+    margin-left:5px;
+}
+#btn .first{
+     background-color: red;
+}
+.direction{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 36px;
+    color: #ffffff;
+    background: rgba(0,0,0,0.3);
+    position:absolute;
+    top:180px;
+    display: none;
+}
+#prev{
+    left:20px;
+}
+#next{
+    right: 20px;
+}
+#box:hover .direction{
+    display: block;
+}
