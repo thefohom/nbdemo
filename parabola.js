@@ -22,7 +22,7 @@
         /**
     
          * @classDescription 
-         * @param {Object} options 
+         * @param {Object}  options 
          */
         initialize: function (options) {
             this.options = this.options || this.getOptions(options);
