@@ -5,10 +5,12 @@ console.log("加载成功");
 require.config({
   paths: {
     jquery: "jquery-1.11.3",
-    "jquery-cookie": "jquery.cookie",
-    parabola: "parabola",
     index: "index",
-    banner: "banner"
+    "jquery-cookie": "jquery.cookie",
+    bannerswp: "bannerswp", 
+    fundbtl: "dbtl",
+    parabola: "parabola"
+    
   },
   //jquery-cookie 是依赖于jquery开发
   shim: {
@@ -21,7 +23,10 @@ require.config({
   },
 });
 
-require(["index", "banner"], function(index, banner){
-    index.download();
+require(["bannerswp","dbtl","index"], function(bannerswp,fundbtl,index){
+  fundbtl.fundbtl();
+  bannerswp.bannerswp();
+  // index.hover1();
+ 
 
-  })
+})

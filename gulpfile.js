@@ -9,7 +9,7 @@ gulp.task("copy-html", function(){
 })
 
 gulp.task("images", function(){
-  return gulp.src("./img/*.{jpg,png,gif}")
+  return gulp.src("img/*.{jpg,png,gif}")
   .pipe(gulp.dest("dist/images"))
   .pipe(connect.reload());
 })

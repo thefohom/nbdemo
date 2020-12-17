@@ -1,7 +1,6 @@
 #banner {
-  width: 1920px;
+  width: 100%;
   height: 721px;
-  margin: 0px auto;
   cursor: pointer;
   position: relative;
   overflow: hidden; }
@@ -37,22 +36,58 @@
   margin-top: 5px; }
 
 .direction {
-  width: 40px;
-  height: 40px;
   line-height: 40px;
   text-align: center;
   font-size: 36px;
   color: #ffffff;
   background: rgba(0, 0, 0, 0.3);
   position: absolute;
-  top: 180px;
-  display: none; }
+  top: 47%;
+  opacity: 0; }
 
 #prev {
-  left: 20px; }
+  left: 217px;
+  transition: 0.3s ease-in;
+  height: 58px;
+  width: 35px;
+  display: block;
+  background: url("../images/zuojt.png") no-repeat; }
+
+#prev p {
+  width: 0px;
+  height: 58px;
+  background: url("../images/lvzuojt.png") no-repeat;
+  transition: 0.5s;
+  overflow: hidden; }
 
 #next {
-  right: 20px; }
+  right: 217px;
+  transition: 0.3s ease-in;
+  height: 58px;
+  width: 35px;
+  display: block;
+  background: url("../images/youjt.png") no-repeat; }
 
-#banner:hover .direction {
-  display: block; }
+#next p {
+  width: 35px;
+  height: 58px;
+  background: url("../images/lvyoujt.png") no-repeat left;
+  transition: 0.5s;
+  transform: scale(0);
+  opacity: 0;
+  transform-origin: right center; }
+
+#banner:hover #prev {
+  transform: translateX(20px);
+  opacity: 1; }
+
+#banner:hover #next {
+  transform: translateX(-20px);
+  opacity: 1; }
+
+#prev:hover p {
+  width: 35px; }
+
+#next:hover p {
+  transform: scale(1);
+  opacity: 1; }

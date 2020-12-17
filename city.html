@@ -1,0 +1,119 @@
+省市区级联（三级联动）<!DOCTYPE html><html><head><meta charset="utf-8"><title>省市区三级联动</title><link href="https://cdn.bootcss.com/bootstrap-select/2.0.0-beta1/css/bootstrap-select.css" rel="stylesheet"></head><body><div id="app"><!-- 省 --> <select v-model="provinceid" @change="updatCity()" class="selectpicker show-tick form-control" data-live-search="true"><option v-for="(item,index) in provinceArr" :value="item.name" :key="index">{{item.name}}</option></select><!-- 市 --> <select v-model="shi" @change="updatShi()" class="selectpicker show-tick form-control" data-live-search="true"><option v-for="(item,index) in shiArr" :key="index" :value="item.name">{{item.name}}</option></select><!-- 区 --> <select v-model="qu" class="selectpicker show-tick form-control" data-live-search="true"><option v-for="(item,index) in quArr" :key="index" :value="item">{{item}}</option></select></div></body></html><script src="vue.js"></script><script src="https://cdn.bootcss.com/bootstrap-select/2.0.0-beta1/js/bootstrap-select.js"></script><script>var vm=new Vue({
+el:'#app',
+data:{
+// 数据
+// 存放默认市的
+provinceid:'北京市',
+provinceArr:[{
+name: "北京市",
+city: [{
+name: "北京市",
+districtAndCounty: ["东城区", "西城区", "崇文区", "宣武区", "朝阳区", "丰台区", "石景山区", "海淀区", "门头沟区", "房山区", "通州区", "顺义区", "昌平区", "大兴区", "怀柔区", "平谷区", "密云县", "延庆县", "延庆镇"]
+}]
+}, {
+name: "重庆市",
+city: [{
+name: "重庆市",
+districtAndCounty: ["渝中区", "大渡口区", "江北区", "沙坪坝区", "九龙坡区", "南岸区", "北碚区", "万盛区", "双桥区", "渝北区", "巴南区", "万州区", "涪陵区", "黔江区", "长寿区", "合川市", "永川区市", "江津市", "南川市", "綦江县", "潼南县", "铜梁县", "大足县", "荣昌县", "璧山县", "垫江县", "武隆县", "丰都县", "城口县", "梁平县", "开县", "巫溪县", "巫山县", "奉节县", "云阳县", "忠县", "石柱土家族自治县", "彭水苗族土家族自治县", "酉阳土家族苗族自治县", "秀山土家族苗族自治县"]
+}]
+}, {
+name: "河北省",
+city: [{
+name: "石家庄市",
+districtAndCounty: ["长安区", "桥东区", "桥西区", "新华区", "裕华区", "井陉矿区", "辛集市", "藁城市", "晋州市", "新乐市", "鹿泉市", "井陉县", "微水镇", "正定县", "正定镇", "栾城县", "栾城镇", "行唐县", "龙州镇", "灵寿县", "灵寿镇", "高邑县", "高邑镇", "深泽县", "深泽镇", "赞皇县", "赞皇镇", "无极县", "无极镇", "平山县", "平山镇", "元氏县", "槐阳镇", "赵县", "赵州镇"]
+}, {
+name: "张家口市",
+districtAndCounty: ["桥西区", "桥东区", "宣化区", "下花园区", "宣化县", "张家口市宣化区", "张北县", "张北镇", "康保县", "康保镇", "沽源县", "平定堡镇", "尚义县", "南壕堑镇", "蔚县", "蔚州镇", "阳原县", "西城镇", "怀安县", "柴沟堡镇", "万全县", "孔家庄镇", "怀来县", "沙城镇", "涿鹿县", "涿鹿镇", "赤城县", "赤城镇", "崇礼县", "西湾子镇"]
+}, {
+name: "承德市",
+districtAndCounty: ["双桥区", "双滦区", "鹰手营子矿区", "承德县", "下板城镇", "兴隆县", "兴隆镇", "平泉县", "平泉镇", "滦平县", "滦平镇", "隆化县", "隆化镇", "丰宁满族自治县", "大阁镇", "宽城满族自治县", "宽城镇", "围场满族蒙古族自治县", "围场镇"]
+}, {
+name: "秦皇岛市",
+districtAndCounty: ["海港区", "山海关区", "北戴河区", "昌黎县", "昌黎镇", "抚宁县", "抚宁镇", "卢龙县", "卢龙镇", "青龙满族自治县", "青龙镇"]
+}]
+
+},{
+name:"山东省",
+city:[{
+name:"济南市",
+districtAndCounty:["历下区","市中区","天桥区","历城区","槐荫区","长清区","章丘区","济阳区","莱芜区","钢城区","平阴县","商河县"]
+},{
+name:"青岛市",
+districtAndCounty:["市南区","市北区","城阳区","李沧区","黄岛区","崂山区","即墨区","胶州市","平度市","莱西市"]
+},{
+name:"淄博市",
+districtAndCounty:["张店区","临淄区","博山区","淄川区","周村区","桓台县","高青县","沂源县"
+]
+},{name:"枣庄市",
+districtAndCounty:["薛城区","峄城区","山亭区","市中区","台儿庄区","滕州市"],
+},{name:"潍坊市",
+districtAndCounty:["潍城区","寒亭区","坊子区","奎文区","昌乐县","临朐县","青州市","诸城市","寿光市","安丘市","高密市","昌邑市"]},
+{name:"烟台市",
+districtAndCounty:["莱山区","芝罘区","福山区","牟平区","长岛县","莱州市","龙口市","莱阳市","招远市","蓬莱市","栖霞市","海阳市"]},
+{name:"临沂市",
+districtAndCounty:["兰山区","罗庄区","河东区","费县","沂南县","沂水县","郯城县","兰陵县","平邑县","蒙阴县","临沭县","莒南县"]},
+{name:"济宁市",
+districtAndCounty:["任城区","兖州区","鱼台县","金乡县","嘉祥县","微山县","汶上县","泗水县","梁山县","曲阜市","邹城市"]},
+{name:"德州市",
+districtAndCounty:["德城区","陵城区","宁津县","齐河县","武城县","平原县","夏津县","临邑县","庆云县","乐陵市","禹城市"]},
+{name:"菏泽市",
+districtAndCounty:["牡丹区","定陶区","曹县","单县","成武县","鄄城县","郓城县","巨野县","东明县"]},
+{name:"滨州市",
+districtAndCounty:["滨城区","沾化区","惠民县","博兴县","阳信县","无棣县","邹平市"]},
+{name:"聊城市",
+districtAndCounty:["东昌府区","茌平区","莘县","冠县","东阿县","阳谷县","高唐县","临清市"]},
+{name:"泰安市",
+districtAndCounty:["泰山区","岱岳区","宁阳县","东平县","新泰市","肥城市"]},
+{name:"日照市",
+districtAndCounty:["东港区","岚山区","莒县","五莲县"]},
+{name:"威海市",
+districtAndCounty:["环翠区","文登区","乳山市","荣成市"]},
+{name:"东营市",
+districtAndCounty:["东营区","河口区","垦利区","广饶县","利津县"]}
+
+
+]
+
+}
+<!---->
+],
+// 存放默认市的
+shi:"北京市",
+shiArr:[{name:"北京市"}],
+// 存放默认区的
+qu:"东城区",
+quArr:["东城区"]
+
+},
+methods:{
+// 方法 切换城市要改变数据
+updatCity(){
+var ref=this;
+this.provinceArr.forEach(function(item,index){
+if(item.name==ref.provinceid){
+ref.shiArr=item.city;
+ref.shi=ref.shiArr[0].name;
+return;
+}
+})
+this.shiArr.forEach(function(item,index){
+if(item.name==ref.shi){
+ref.quArr=item.districtAndCounty;
+ref.qu=ref.quArr[0];
+return;
+}
+})
+
+},
+updatShi(){
+var ref=this;
+this.shiArr.forEach(function(item,index){
+if(item.name==ref.shi){
+ref.quArr=item.districtAndCounty;
+ref.qu=ref.quArr[0];
+return;
+}
+})
+}
+}
+});</script>

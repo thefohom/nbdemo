@@ -7,11 +7,8 @@ require.config({
     jquery: "jquery-1.11.3",
     index: "index",
     "jquery-cookie": "jquery.cookie",
-    bannerswp: "bannerswp", 
     fundbtl: "dbtl",
-    parabola: "parabola"
-    
-  },
+     },
   //jquery-cookie 是依赖于jquery开发
   shim: {
     //设置依赖关系
@@ -23,10 +20,8 @@ require.config({
   },
 });
 
-require(["bannerswp","dbtl","index"], function(bannerswp,fundbtl,index){
+require(["dbtl","index"], function(fundbtl,index){
   fundbtl.fundbtl();
-  bannerswp.bannerswp();
-  // index.hover1();
- 
+  index.download();
 
 })

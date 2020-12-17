@@ -1,0 +1,18 @@
+[
+    {"id": 0,
+        "bsboxpic":"../images/mid1.jpg",
+        "bigboxpic":"../images/bigimg1.jpg",
+        "smulli":"../images/mid1.jpg",
+        "smulli1":"../images/mid2.jpg",
+        "smulli2":"../images/mid3.jpg",
+        "smulli3":"../images/mid4.jpg",
+        "smulli4":"../images/mid5.jpg",
+        "smulli5":"../images/mid1.jpg",
+        "smulli6":"../images/mid2.jpg",
+        "price":2399.00,
+        "oldprice":2899.00,
+        "kucun":668
+
+    }
+
+]
